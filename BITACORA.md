@@ -52,6 +52,21 @@ Carga terminada
 **Commit:** el mensaje del commit de esta corrección.
 
 ---
+## Falla 4 (Parte 2 / Ticket 2 / F1 / F2 / Extra)
+
+**Síntoma:** Las clases en ?con_lugar=1 salían aun cuando estaban o completas o canceladas
+
+
+**Causa raíz:** en models.py, la calse ClaseQuerrySet en la funcon con_lugar solo contaba con filtrar las clases por num_inscritos__lte=F("cupo"). 
+
+**Corrección:** pegué en google qué hace __lte y es less or equal, entonces las  iba a mostrar aun estando 20/20, entonces se corrige con __lt para que sea < y también se filtra unicamente si la clase tiene el estado de ACTIVA, pues antes no hacia ese filtro 
+
+**Verificación:** refresh, darle en el dashboard a ver solo clases con lugar y ya sale la busqueda con el filtro bien
+
+**Commit:** el mensaje del commit de esta corrección.
+
+---
+
 
 
 
