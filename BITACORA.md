@@ -67,6 +67,21 @@ Carga terminada
 
 ---
 
+## Falla 4 (Parte 2 / Ticket 3 / F1 / F2 / Extra)
+
+**Síntoma:** Salian 39 resultados
+
+
+**Causa raíz:** el filtro está trayendo duplicados porque en el models.py en la funcion calse_buscar hace el filtro y le dice que tragia todo. 
+
+**Corrección:** simplemente añadir un .distinct() para que no te traiga duplicados
+
+**Verificación:** al darle refresh y buscar yoga ya salen las únicas YOGA con códigos digerentes
+
+**Commit:** el mensaje del commit de esta corrección.
+
+---
+
 
 
 
