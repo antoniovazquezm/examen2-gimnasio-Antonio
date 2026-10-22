@@ -49,7 +49,7 @@ Carga terminada
 
 **Verificación:** tenía mi servidor corriendo, solo de di refresh y ya sale la tabla con las clases de la semana.
 
-**Commit:** el mensaje del commit de esta corrección.
+**Commit:** git commit -m "corrección ticket 1"
 
 ---
 ## Falla 4 (Parte 2 / Ticket 2 / F1 / F2 / Extra)
@@ -63,11 +63,11 @@ Carga terminada
 
 **Verificación:** refresh, darle en el dashboard a ver solo clases con lugar y ya sale la busqueda con el filtro bien
 
-**Commit:** el mensaje del commit de esta corrección.
+**Commit:** git commit -m "ajuste de filtro en models.py para el ticket2. Corrección de filtro y se añadió al filtro que sea por clases activas"
 
 ---
 
-## Falla 4 (Parte 2 / Ticket 3 / F1 / F2 / Extra)
+## Falla 5 (Parte 2 / Ticket 3 / F1 / F2 / Extra)
 
 **Síntoma:** Salian 39 resultados
 
@@ -78,7 +78,7 @@ Carga terminada
 
 **Verificación:** al darle refresh y buscar yoga ya salen las únicas YOGA con códigos digerentes
 
-**Commit:** el mensaje del commit de esta corrección.
+**Commit:** git commit -m "ticket3 corrección, el filtro no tenía .distinct() entonces traía duplicados"
 
 ---
 
