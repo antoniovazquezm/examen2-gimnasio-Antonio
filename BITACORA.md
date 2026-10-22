@@ -38,6 +38,23 @@ Carga terminada
 **Commit:** el mensaje del commit de esta corrección.
 
 ---
+## Falla 3 (Parte 2 / Ticket 1 / F1 / F2 / Extra)
+
+**Síntoma:** Reverse for 'detalle_clase' not found. 'detalle_clase' is not a valid view function or pattern name.
+
+
+**Causa raíz:** En en gimnasio/urls.py está escrito:     path("clases/<int:pk>/", views.clase_detalle, name="clase_detalle") y está buscando detalle_clase
+
+**Corrección:** corregir en name="detalle_clase"
+
+**Verificación:** tenía mi servidor corriendo, solo de di refresh y ya sale la tabla con las clases de la semana.
+
+**Commit:** el mensaje del commit de esta corrección.
+
+---
+
+
+
 
 ## Declaración de uso de IA
 
