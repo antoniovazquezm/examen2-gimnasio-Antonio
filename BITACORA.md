@@ -1,7 +1,7 @@
 # Bitácora del examen
 
-**Nombre:**
-**Repositorio:**
+**Nombre: Antonio Vázquez Montalban**
+**Repositorio: https://github.com/antoniovazquezm/examen2-gimnasio-Antonio**
 
 Copia el bloque de abajo una vez por cada falla que encuentres. Llénalo en el momento, no al final.
 
@@ -9,13 +9,13 @@ Copia el bloque de abajo una vez por cada falla que encuentres. Llénalo en el m
 
 ## Falla N (Parte 1 / Ticket N / F1 / F2 / Extra)
 
-**Síntoma:** qué viste. Pega la última línea del error o describe el comportamiento.
+**Síntoma:** RuntimeError: Model class gimnasio.models.Disciplina doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS
 
-**Causa raíz:** por qué pasaba. Explícalo como se lo explicarías a Kevin.
+**Causa raíz:** Django está intentando cargar tu modelo Disciplina pero no esta la app agregada en las installed apps en tu archivo de settings.py.
 
-**Corrección:** qué cambiaste y en qué archivo(s).
+**Corrección:** en settings.py añadí en INSTALLED_APPS debajo de rest_framework: , gimasio
 
-**Verificación:** cómo comprobaste que quedó (comando, URL, consulta en el shell, prueba).
+**Verificación:** python manage.py migrate, todas las migraciones ok
 
 **Commit:** el mensaje del commit de esta corrección.
 
