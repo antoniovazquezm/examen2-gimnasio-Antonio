@@ -32,7 +32,7 @@ class Command(BaseCommand):
 
         # 2. Clases
         for fila in leer_csv("clases.csv"):
-            disciplina = Disciplina.objects.create(nombre=fila["disciplina"])
+            disciplina, _ = Disciplina.objects.get_or_create(nombre=fila["disciplina"])
             Clase.objects.update_or_create(
                 codigo=fila["codigo"],
                 defaults={
